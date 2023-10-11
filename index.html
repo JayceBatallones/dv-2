@@ -57,15 +57,10 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-2">
-        <div id="specVis2" class="vis-container"></div>
+        <div id="vis2" class="vis-container"></div>
       </div>
       <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>EV's</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+        <div class="description description-below">
         </div>
       </div>
     </div>
@@ -84,18 +79,16 @@
   <script type="text/javascript">
     var specVis1 = "./v1.vg.json";
     var specVis2 = "./v2.vg.json";
+    var specVis3 = "./v3.vg.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
     vegaEmbed('#vis2', specVis2, { "actions": false });
 
-    vegaEmbed('#vis3', specVis1, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis4', specVis2, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
   </script>
 </body>
 
