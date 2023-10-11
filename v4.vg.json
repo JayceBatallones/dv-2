@@ -1,0 +1,11 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple pie chart with embedded data.",
+    "data": {"url": "https://raw.githubusercontent.com/JayceBatallones/ev-vis/main/src/assets/Electric_Vehicle_Population_Data.csv"
+    },
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "Electric Vehicle Type", "type": "quantitative", "stack":"normalize", "aggregate":"sum"},
+      "color": {"field": "Electric Vehicle Type", "type": "nominal"}
+    }
+  }
