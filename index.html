@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Multiple Visualisations | An Example</title>
+  <title>EV's Overtime</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -29,28 +29,51 @@
   <div class="page">
 
     <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <h1>Electric Vehicles</h1>
-        <p>This page demonstrates EV's over time.</p>
-      </div>
+    <div class="rounded-container">
+      <h1>Electric Vehicles Overtime</h1>
     </div>
     <!-- end pure grid group -->
 
+    <div class="spacing_container"></div>
+
     <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>EV's</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+    <div class="rounded-container"> 
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="paragraph1">
+            <p>Electric vehicles are the future of transportation.</p>
+          </div>
         </div>
+        
+
+        <div class="pure-u-1-2">
+          <div class="paragraph2">
+            <p>How </p>
+          </div>
+        </div>
+
       </div>
-      <div class="pure-u-1-2">
-        <div id="vis1" class="vis-container"></div>
-      </div>
+    </div>
+     <!-- end pure grid group -->
+
+    <div class="spacing_container"> </div>
+
+    <!-- pure grid group -->
+    <div class="rounded-container">
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="description description-left">
+            <h2>EV's</h2>
+            <p>The first column contains text and the second column contains a visualisation.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            </div>o
+          </div>
+          <div class="pure-u-1-2">
+            <div id="vis1" class="vis-container"></div>
+          </div>
+        </div>
     </div>
     <!-- end pure grid group -->
 
@@ -77,9 +100,9 @@
   </div> <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = "./v1.vg.json";
-    var specVis2 = "./v2.vg.json";
-    var specVis3 = "./v3.vg.json";
+    var specVis1 = "./json/v1.vg.json";
+    var specVis2 = "./json/v2.vg.json";
+    var specVis3 = "./json/v3.vg.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
