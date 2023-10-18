@@ -1,21 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "https://raw.githubusercontent.com/JayceBatallones/ev-vis/main/src/assets/Electric_Vehicle_Population_Data.csv"},
-    "width": 300,
+    "width": 200,
     "height": 200,
-    "title": "Electric Vehicle ",
-    "mark": "area",
+    "title": "Electric Vehicle",
+    "config": {
+      "background": "#e0fbfc"
+    },
+
+
+    "mark": {"type": "arc", "tooltip": true},
     "encoding": {
-      "x": {
-        "timeUnit": "year",
-        "field": "Model Year",
-        "axis": {"domain": false, "format": "%Y"}
-      },
-      "y": {
-        "aggregate": "count",
-        "field": "Electric Vehicle Type",
-        "stack": "normalize"
-      },
-      "color": {"field": "Make", "scale": {"scheme": "category20b"}}
+      "theta": {"aggregate": "count","field":"Electric Vehicle Type", "type": "quantitative", "stack": "normalize"},
+      "color": {"field": "Electric Vehicle Type", "type": "nominal"}
     }
   }

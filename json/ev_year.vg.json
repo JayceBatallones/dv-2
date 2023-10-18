@@ -1,0 +1,57 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 300,
+    "config": {
+        "background": "#e0fbfc"
+    },
+    "title": "Electric Vehicle Manufacturers",
+    "description": ".",
+    "data": {
+      "url": "https://raw.githubusercontent.com/JayceBatallones/dv-2/main/data/Electric_Vehicle_Population_Data.csv"
+    },
+
+    "params": [
+        {
+            "name":"vehiclesproduced",
+            "value": 100,
+            "bind": {
+                "input": "range",
+                "min": 0,
+                "max": 52000,
+                "step": 1000,
+                "name": "Vehicles Produced"
+            }
+        }
+    ],
+    "transform": [{"filter": "datum.Manufacturer > vehiclesproduced"}],
+    "layer": [
+        {
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "aggregate": "count",
+                    "type": "quantitative",
+                    "field": "cars",
+                    "title": "Vehicles Produced"
+                    
+                },
+                "y": {
+                    "title": "Manufacturers",
+                    "field": "Manufacturer",
+                    "type": "ordinal",
+                    "sort": "-x"
+                },
+                "tooltip": [
+                    {"field": "Manufacturer", "type":"nominal"},
+                    {"field": "cars", "aggregate": "count", "type":"ordinal", "title": "Vehicles Manufactured"}
+                ]
+            }
+        }
+    ]
+
+
+
+    
+  }
+  

@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height": 450,
-  "title": "Electric Vehicles in the United States",
+  "config": {
+    "background": "#e0fbfc"
+  },
+  "title": "Electric Vehicles in Washington",
   "projection": {"type": "equalEarth"},
   "layer": [
     {
