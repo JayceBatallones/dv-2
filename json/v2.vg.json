@@ -6,7 +6,6 @@
         "background": "#e0fbfc"
     },
     "title": "Electric Vehicle Manufacturers",
-    "description": ".",
     "data": {
       "url": "https://raw.githubusercontent.com/JayceBatallones/dv-2/main/data/EV_Company_Manufactured.csv"
     },
@@ -27,7 +26,6 @@
     "layer": [{
         "mark": "bar",
         "encoding": {
-            
             "x": {
                 "field": "Manufactured",
                 "type": "quantitative",
@@ -44,7 +42,9 @@
                 {"field": "Manufactured", "type":"ordinal", "title": "Vehicles Manufactured"}
             ]
         }
-    }]
+     
+    }
+]
             
             
     
