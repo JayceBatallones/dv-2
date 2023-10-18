@@ -19,7 +19,7 @@
                 "min": 0,
                 "max": 52000,
                 "step": 1000,
-                "name": "Vehicles Produced"
+                "name": "Vehicles Registered"
             }
         }
     ],
@@ -29,7 +29,7 @@
             "x": {
                 "field": "Manufactured",
                 "type": "quantitative",
-                "title": "Vehicles Produced"
+                "title": "Vehicles Registered"
             },
             "y": {
                 "field": "Manufacturer",

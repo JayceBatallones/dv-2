@@ -38,7 +38,7 @@
               "color": {
                   "field": "Vehicles",
                   "type": "quantitative",
-                  "title": "EV's in Washington",
+                  "title": "EV's per county",
                   "scale": {
                       "type": "threshold",
                       "domain": [50, 100, 500, 1000, 5000, 20000]
@@ -46,7 +46,7 @@
               },
               "tooltip":[
                   {"field": "properties.NAME", "type":"nominal", "title":"County"},
-                  {"field": "Vehicles", "type": "quantitative", "title": "EV's Owned"}
+                  {"field": "Vehicles", "type": "quantitative", "title": "EV's Registered"}
               ]
           }
       }
