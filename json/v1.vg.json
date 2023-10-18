@@ -1,50 +1,35 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "width": "container",
   "height": 450,
   "config": {
     "background": "#e0fbfc"
   },
-  "title": "Electric Vehicles in Washington",
-  "projection": {"type": "equalEarth"},
-  "layer": [
-    {
-      "data": {
-      "url":
-    "https://raw.githubusercontent.com/JayceBatallones/dv-2/main/data/usmap.json",
-    "format": {"type": "topojson", "feature":
-    "ne_110m_admin_0_countries"}
-    },
-    "mark": {"type": "geoshape", "fill": "lightgray", "stroke":
-    "white"}
-    },
-    {
-      "data": {
-      "url":
-      "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbo
-      l_map/data/earthquake.csv"
+  "data": {
+      "url": "https://raw.githubusercontent.com/JayceBatallones/dv-2/main/data/ne_10m_admin_2_counties.json",
+      "format": {
+          "type": "topojson", 
+          "feature": "counties"
+          }
       },
-      "mark": {"type": "circle", "tooltip": {"content": "data"}},
+      "transform": [{
+          "lookup": "County",
+          "from": {
+              "data": {
+                  "url": "https://raw.githubusercontent.com/JayceBatallones/dv-2/main/data/Electric_Vehicle_Population_Data.csv"
+              },
+              "key": "county",
+              "fields": ["county"]
+          }
+      }],
+      "projection": {
+          "type": "albersUsa"
+      },
+      "mark": "geoshape",
       "encoding": {
-      "longitude": {"field": "longitude", "type":
-      "quantitative"},
-      "latitude": {"field": "latitude", "type":
-      "quantitative"},
-      "size": {
-      "field": "mag",
-      "type": "quantitative",
-      "title": "Magnitude (Richter scale)",
-      "scale": {"domain": [4, 8]}
-      },
-      "color": {
-      "field": "depth",
-      "type": "quantitative",
-      "title": "Depth in km",
-      "scale": {"scheme": "reds"}
+          "color": {
+              "field": "county",
+              "type": "quantitative"
+          }
       }
-      }
-      }
-      ]
-    }
-    
-  
+  }

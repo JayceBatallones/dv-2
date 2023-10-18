@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
+    "width": 250,
     "height": 300,
     "config": {
         "background": "#e0fbfc"
@@ -8,7 +8,7 @@
     "title": "Electric Vehicle Manufacturers",
     "description": ".",
     "data": {
-      "url": "https://raw.githubusercontent.com/JayceBatallones/dv-2/main/data/Electric_Vehicle_Population_Data.csv"
+      "url": "https://raw.githubusercontent.com/JayceBatallones/dv-2/main/data/EV_Company_Manufactured.csv"
     },
 
     "params": [
@@ -24,40 +24,29 @@
             }
         }
     ],
-    "encoding": {
-                
-        "x": {
-            "aggregate": "count",
-            "type": "quantitative",
-            "field": "cars",
-            "title": "Vehicles Produced"
-            
-        },
-        "y": {
-            "title": "Manufacturers",
-            "field": "Manufacturer",
-            "type": "ordinal",
-            "sort": "-x"
-        },
-        "tooltip": [
-            {"field": "Manufacturer", "type":"nominal"},
-            {"field": "cars", "aggregate": "count", "type":"ordinal", "title": "Vehicles Manufactured"}
-        ]
-    },
     "layer": [{
-        "mark": "bar" }, {
-            "mark": {
-                "type": "text",
-                "align": "left",
-                "baseline": "middle",
-                "dx": 3
-                },
-                "encoding": {
-                "text": {"field": "cars", "aggregate": "count", "type": "quantitative"}
-            }
-        }]
-
-
+        "mark": "bar",
+        "encoding": {
+            
+            "x": {
+                "field": "Manufactured",
+                "type": "quantitative",
+                "title": "Vehicles Produced"
+            },
+            "y": {
+                "field": "Manufacturer",
+                "title": "Manufacturers",
+                "type": "ordinal",
+                "sort": "-x"
+            },
+            "tooltip": [
+                {"field": "Manufacturer", "type":"nominal"},
+                {"field": "Manufactured", "type":"ordinal", "title": "Vehicles Manufactured"}
+            ]
+        }
+    }]
+            
+            
     
   }
   

@@ -3,15 +3,16 @@
     "data": {"url": "https://raw.githubusercontent.com/JayceBatallones/ev-vis/main/src/assets/Electric_Vehicle_Population_Data.csv"},
     "width": 200,
     "height": 200,
-    "title": "Electric Vehicle",
+    "title": "Electric Vehicle Types",
     "config": {
       "background": "#e0fbfc"
     },
 
-
-    "mark": {"type": "arc", "tooltip": true},
+    "mark": {
+      "type": "arc",
+      "tooltip": true},
     "encoding": {
-      "theta": {"aggregate": "count","field":"Electric Vehicle Type", "type": "quantitative", "stack": "normalize"},
+      "theta": {"aggregate": "count","field":"Electric Vehicle Type", "type": "quantitative"},
       "color": {"field": "Electric Vehicle Type", "type": "nominal"}
     }
   }
