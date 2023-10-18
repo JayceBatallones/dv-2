@@ -1,10 +1,19 @@
 body *{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Tilt Neon', sans-serif;
 }
 
 h1 {
   font-weight: 900;
   text-align: center;
+  place-items: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+h2 {
+  font-weight: 800; 
+  text-align: center;
+  place-items: center;
+  font-family: 'Orbitron', sans-serif;
 }
 
 body {
@@ -21,20 +30,20 @@ body {
 
 .paragraph1,
 p {
-  font-size:18px;
+  font-size:20px;
   padding-right: 10px;
   text-align: justify;
 }
 .paragraph2,
 p{
-  font-size:18px;
+  font-size:20px;
   padding-left: 10px;
   text-align: justify;
 
 }
 
 .rounded-container {
-  background-color: #C9EDDC; 
+  background-color: #e0fbfc; 
   border: 1px solid #999; 
   border-radius: 10px; 
   padding: 20px; 
